@@ -1,4 +1,4 @@
-## [fe-interview-2024](https://daotin.github.io/fe-interview-2024/)
+## [fe-interview-2024](https://github.com/Daotin/fe-interview-2024)
 [RSS Feed](https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml)
 
 ## 最近更新
