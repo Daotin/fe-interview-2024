@@ -1,5 +1,4 @@
-## [Gitblog](https://yihong0618.github.io/gitblog/)
-My personal blog([About Me](https://github.com/yihong0618/gitblog/issues/282)) using issues and GitHub Actions (随意转载，无需署名)
+## [fe-interview-2024](https://daotin.github.io/fe-interview-2024/)
 [RSS Feed](https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml)
 
 ## 最近更新
