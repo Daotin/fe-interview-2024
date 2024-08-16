@@ -1,6 +1,5 @@
-## [Gitblog](https://yihong0618.github.io/gitblog/)
-My personal blog([About Me](https://github.com/yihong0618/gitblog/issues/282)) using issues and GitHub Actions (随意转载，无需署名)
-[RSS Feed](https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml)
+## [fe-interview-2024](https://github.com/Daotin/fe-interview-2024/)
+2024前端面试题 [RSS Feed](https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml)
 
 ## 最近更新
 - [CSS几种定位的规则、定位参照物、对文档流的影响](https://github.com/Daotin/fe-interview-2024/issues/3)--2024-08-16
