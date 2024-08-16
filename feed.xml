@@ -1,5 +1,52 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T05:52:52.496553+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-16T05:52:52.773704+00:00</updated><content type="html"><![CDATA[<ol>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T06:21:48.607760+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-16T06:21:48.758195+00:00</updated><content type="html"><![CDATA[<ol>
+<li>
+<p><strong>静态定位 (<code>static</code>)</strong>：</p>
+<ul>
+<li><strong>规则</strong>：默认定位，元素按文档流正常排列。</li>
+<li><strong>定位参照物</strong>：无。</li>
+<li><strong>对文档流影响</strong>：不影响，元素保持在文档流中。</li>
+<li><strong>应用场景</strong>：默认使用，适合大部分情况。</li>
+</ul>
+</li>
+<li>
+<p><strong>相对定位 (<code>relative</code>)</strong>：</p>
+<ul>
+<li><strong>规则</strong>：相对于元素自身的原始位置进行偏移。</li>
+<li><strong>定位参照物</strong>：元素自身的位置。</li>
+<li><strong>对文档流影响</strong>：占据原位置，不脱离文档流。具体来说，当你使用 position: relative 时，该元素会保持在文档流中的原始位置，但你可以使用 left、right、top 和 bottom 属性来调整该元素相对于其原始位置的偏移量。元素仍然会占据其在文档流中的原始位置，只是视觉上会移动。所以，可能导致覆盖到其他元素。</li>
+<li><strong>应用场景</strong>：对元素做微调，保持其在文档流中的位置。</li>
+</ul>
+</li>
+<li>
+<p><strong>绝对定位 (<code>absolute</code>)</strong>：</p>
+<ul>
+<li><strong>规则</strong>：相对于最近的已定位祖先元素（<code>relative</code>、<code>absolute</code>或<code>fixed</code>）进行定位；若无，则相对于<code>&lt;html&gt;</code>定位。</li>
+<li><strong>定位参照物</strong>：最近的已定位祖先元素或<code>&lt;html&gt;</code>。</li>
+<li><strong>对文档流影响</strong>：脱离文档流，不占据空间。</li>
+<li><strong>应用场景</strong>：需要精确控制元素位置的场景，如浮动面板或弹出框。</li>
+</ul>
+</li>
+<li>
+<p><strong>固定定位 (<code>fixed</code>)</strong>：</p>
+<ul>
+<li><strong>规则</strong>：相对于浏览器窗口进行定位。</li>
+<li><strong>定位参照物</strong>：浏览器窗口。</li>
+<li><strong>对文档流影响</strong>：脱离文档流，不占据空间。</li>
+<li><strong>应用场景</strong>：固定在页面某个位置不随滚动条滚动，如固定导航栏。</li>
+</ul>
+</li>
+<li>
+<p><strong>粘性定位 (<code>sticky</code>)</strong>：</p>
+<ul>
+<li><strong>规则</strong>：元素在跨越某个阈值前表现为相对定位，超出阈值后表现为固定定位。比如，top: 10px 是相对于视口顶部的偏移量，而不是相对于其父元素或其他元素。当元素达到这个偏移位置时，它就会“粘”在那个位置。</li>
+<li><strong>定位参照物</strong>：最近的滚动容器（通常是<code>&lt;html&gt;</code>）。</li>
+<li><strong>对文档流影响</strong>：占据空间，但在特定条件下会脱离文档流。</li>
+<li><strong>应用场景</strong>：如表头随滚动固定在顶部的效果。</li>
+</ul>
+</li>
+</ol>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-16T06:21:48.844697+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong><code>script</code></strong>: </p>
 <ul>
@@ -27,5 +74,5 @@
 <li><code>async</code>和<code>defer</code>只对外部脚本有效，内联脚本无效。</li>
 <li>使用<code>defer</code>时，确保脚本间的执行顺序。</li>
 </ul>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T05:52:52.916857+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T06:21:48.947720+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
 ]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/1"/><category term="demo"/><published>2024-08-16T02:37:19+00:00</published></entry></feed>
