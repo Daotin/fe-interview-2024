@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T06:32:50.136138+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/4</id><title>水平垂直居中的方案</title><updated>2024-08-16T06:32:50.342380+00:00</updated><content type="html"><![CDATA[<p>1、有固定的宽度
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T07:20:16.750348+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/5</id><title>typeof和instanceof的区别</title><updated>2024-08-16T07:20:16.935118+00:00</updated><content type="html"><![CDATA[<p><code>typeof</code> 和 <code>instanceof</code> 都是 JavaScript 中用于类型检查的操作符，但它们的使用场景和功能有所不同。</p>
+<p><code>typeof</code> 用于检测一个变量的数据类型。它返回一个字符串，表示变量的类型，比如 <code>&quot;string&quot;</code>、<code>&quot;number&quot;</code>、<code>&quot;boolean&quot;</code>、<code>&quot;undefined&quot;</code>、<code>&quot;object&quot;</code>、<code>&quot;function&quot;</code>、以及 ES6 引入的 <code>&quot;symbol&quot;</code>。<code>typeof</code> 适用于基本数据类型的判断，尤其是当你不确定变量是否已定义或是否为基本类型时。此外，对于引用类型的对象，<code>typeof</code> 通常返回 <code>&quot;object&quot;</code>，但需要注意的是，对 <code>null</code> 执行 <code>typeof</code> 也会返回 <code>&quot;object&quot;</code>，这是一种历史遗留的设计问题。</p>
+<blockquote>
+<p>[!warning]
+其中数组、对象、null都会被判断为object，其他判断都正确。</p>
+</blockquote>
+<p>相比之下，<code>instanceof</code> 用于检测一个对象是否为某个构造函数的实例。它通过检查对象的原型链来判断，返回一个布尔值。<code>instanceof</code> 主要应用于判断复杂类型，比如自定义类实例或数组等。它能够更准确地识别出对象的具体类型，尤其是在需要区分对象的继承关系或具体类型时。</p>
+<p>总结来说，<code>typeof</code> 适合用于判断基本数据类型，而 <code>instanceof</code> 则适用于检测对象是否属于特定的类或构造函数。两者结合使用，可以在不同场景下进行灵活的类型检查。</p>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/5"/><category term="javascript"/><published>2024-08-16T07:19:51+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/4</id><title>水平垂直居中的方案</title><updated>2024-08-16T07:20:17.040601+00:00</updated><content type="html"><![CDATA[<p>1、有固定的宽度
 方法1：absolute + 负margin
 方法2：absolute + margin: auto</p>
 <p>2、无固定的宽度
 方法1：absolute + transform反向偏移
 方法2：flex布局</p>
 <p><a href="https://daotin.github.io/fe-blog/posts/2021/07/27/%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.html">https://daotin.github.io/fe-blog/posts/2021/07/27/%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.html</a></p>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/4"/><category term="css"/><published>2024-08-16T06:32:26+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-16T06:32:50.440115+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/4"/><category term="css"/><published>2024-08-16T06:32:26+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-16T07:20:17.120312+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong>静态定位 (<code>static</code>)</strong>：</p>
 <ul>
@@ -53,7 +61,7 @@
 </ul>
 </li>
 </ol>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-16T06:32:50.558406+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-16T07:20:17.204351+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong><code>script</code></strong>: </p>
 <ul>
@@ -81,5 +89,5 @@
 <li><code>async</code>和<code>defer</code>只对外部脚本有效，内联脚本无效。</li>
 <li>使用<code>defer</code>时，确保脚本间的执行顺序。</li>
 </ul>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T06:32:50.645954+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T07:20:17.295822+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
 ]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/1"/><category term="demo"/><published>2024-08-16T02:37:19+00:00</published></entry></feed>
