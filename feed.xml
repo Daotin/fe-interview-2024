@@ -1,3 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T02:37:46.964473+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T02:37:47.142888+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T05:52:52.496553+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-16T05:52:52.773704+00:00</updated><content type="html"><![CDATA[<ol>
+<li>
+<p><strong><code>script</code></strong>: </p>
+<ul>
+<li>默认情况下同步执行，会阻塞页面解析。</li>
+<li><strong>应用场景</strong>：一般用于必须在页面加载前执行的脚本，如动态内容生成。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>script async</code></strong>: </p>
+<ul>
+<li>异步执行，脚本下载完成后立即执行，不会阻塞页面解析。</li>
+<li><strong>应用场景</strong>：适用于独立于其他脚本或DOM的脚本，如广告或统计脚本。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>script defer</code></strong>: </p>
+<ul>
+<li>异步执行，但会在HTML解析完成后、<code>DOMContentLoaded</code>事件前按顺序执行。</li>
+<li><strong>应用场景</strong>：用于需要在DOM解析完后执行的脚本，如初始化脚本。</li>
+</ul>
+</li>
+</ol>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li><code>async</code>和<code>defer</code>只对外部脚本有效，内联脚本无效。</li>
+<li>使用<code>defer</code>时，确保脚本间的执行顺序。</li>
+</ul>
+]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T05:52:52.916857+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
 ]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/1"/><category term="demo"/><published>2024-08-16T02:37:19+00:00</published></entry></feed>
