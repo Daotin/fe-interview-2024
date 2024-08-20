@@ -1,7 +1,7 @@
 ## [issue-blog](https://github.com/Daotin/issue-blog/)
-- issue博客：https://github.com/Daotin/issue-blog/
-- 原博客地址：https://daotin.github.io/fe-blog/
-- 专栏系列：https://daotin.github.io/fe-series-notes/
+<p align="center">
+    <a href="https://github.com/Daotin/issue-blog/">issue博客</a> | <a href="https://daotin.github.io/fe-blog/">原博客</a> | <a href="https://daotin.github.io/fe-series-notes/">专栏系列</a>
+</p>
 
 ## 最近更新
 - [跨域的时候，post为什么会发送两次请求？](https://github.com/Daotin/issue-blog/issues/7)--2024-08-20
