@@ -10,9 +10,9 @@ from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
 MD_HEAD = """## [issue-blog](https://github.com/Daotin/issue-blog/)
-- issue博客：https://github.com/Daotin/issue-blog/
-- 原博客地址：https://daotin.github.io/fe-blog/
-- 专栏系列：https://daotin.github.io/fe-series-notes/
+<p align="center">
+    <a href="https://github.com/Daotin/issue-blog/">issue博客</a> | <a href="https://daotin.github.io/fe-blog/">原博客</a> | <a href="https://daotin.github.io/fe-series-notes/">专栏系列</a>
+</p>
 """
 
 BACKUP_DIR = "BACKUP"
