@@ -9,8 +9,10 @@ from github import Github
 from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
-MD_HEAD = """## [fe-interview-2024](https://github.com/Daotin/fe-interview-2024/)
-2024前端面试题 [RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
+MD_HEAD = """## [issue-blog](https://github.com/Daotin/issue-blog/)
+- issue博客：https://github.com/Daotin/issue-blog/
+- 原博客地址：https://daotin.github.io/fe-blog/
+- 专栏系列：https://daotin.github.io/fe-series-notes/
 """
 
 BACKUP_DIR = "BACKUP"
