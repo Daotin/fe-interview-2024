@@ -1,5 +1,193 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/fe-interview-2024</id><title>RSS feed of Daotin's fe-interview-2024</title><updated>2024-08-16T07:20:16.750348+00:00</updated><link href="https://github.com/Daotin/fe-interview-2024"/><link href="https://raw.githubusercontent.com/Daotin/fe-interview-2024/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/fe-interview-2024/issues/5</id><title>typeof和instanceof的区别</title><updated>2024-08-16T07:20:16.935118+00:00</updated><content type="html"><![CDATA[<p><code>typeof</code> 和 <code>instanceof</code> 都是 JavaScript 中用于类型检查的操作符，但它们的使用场景和功能有所不同。</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/issue-blog</id><title>RSS feed of Daotin's issue-blog</title><updated>2024-08-20T01:35:13.874486+00:00</updated><link href="https://github.com/Daotin/issue-blog"/><link href="https://raw.githubusercontent.com/Daotin/issue-blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/issue-blog/issues/6</id><title>行尾符号LF和CRLF</title><updated>2024-08-20T01:35:14.041625+00:00</updated><content type="html"><![CDATA[<h2>一般在不同的系统，行业通用的做法是如何使用行尾符号的？</h2>
+<p>在不同操作系统上，行尾符号的使用有一定的行业惯例和最佳实践。以下是不同系统以及在跨平台开发中常见的行尾符号使用方式：</p>
+<h3>不同操作系统的行尾符号惯例</h3>
+<ol>
+<li>
+<p><strong>Unix/Linux 和 macOS</strong>：</p>
+<ul>
+<li>使用 LF (Line Feed)，即 <code>\n</code> 作为行尾符号。</li>
+<li>这是大多数服务器和开发环境的默认行尾符号。</li>
+</ul>
+</li>
+<li>
+<p><strong>Windows</strong>：</p>
+<ul>
+<li>使用 CRLF (Carriage Return and Line Feed)，即 <code>\r\n</code> 作为行尾符号。</li>
+<li>Windows上的大多数文本编辑器默认使用这种行尾符号。</li>
+</ul>
+</li>
+</ol>
+<h3>行业通用的做法</h3>
+<ol>
+<li>
+<p><strong>统一行尾符号</strong>：</p>
+<ul>
+<li>在跨平台项目中，统一使用LF行尾符号是比较常见的做法，因为大多数现代版本控制系统和代码编辑器都可以很好地处理LF行尾符号。</li>
+<li>
+可以在项目根目录下创建 <code>.editorconfig</code> 文件，配置行尾符号格式：<pre><code class="language-ini">root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Git的行尾符号转换</strong>：</p>
+<ul>
+<li>
+Git 提供了 <code>core.autocrlf</code> 选项来处理行尾符号转换：<ul>
+<li><code>core.autocrlf=true</code>：在Windows上检出代码时将LF转换为CRLF，提交代码时将CRLF转换为LF。</li>
+<li><code>core.autocrlf=input</code>：在检出代码时不转换行尾符号，提交代码时将CRLF转换为LF。这种设置适用于开发人员在Unix/Linux或macOS系统上。</li>
+<li><code>core.autocrlf=false</code>：不进行任何转换。这种设置适用于所有开发人员都使用统一的行尾符号，例如通过<code>.editorconfig</code>来强制执行LF行尾符号。</li>
+</ul>
+</li>
+</ul>
+<p>例如，在Windows系统上可以设置：</p>
+<pre><code class="language-sh">git config --global core.autocrlf true
+</code></pre>
+<p>在Unix/Linux或macOS系统上可以设置：</p>
+<pre><code class="language-sh">git config --global core.autocrlf input
+</code></pre>
+</li>
+<li>
+<p><strong>.gitattributes 文件</strong>：</p>
+<ul>
+<li>通过 <code>.gitattributes</code> 文件来强制特定文件类型使用特定的行尾符号。</li>
+<li>
+在项目根目录下创建 <code>.gitattributes</code> 文件，内容如下：<pre><code class="language-text">* text=auto
+*.sh text eol=lf
+*.bat text eol=crlf
+</code></pre>
+</li>
+<li>这可以确保Shell脚本使用LF行尾符号，而批处理文件使用CRLF行尾符号。</li>
+</ul>
+</li>
+</ol>
+<h3>总结</h3>
+<p>行业通用的做法是尽量统一使用LF行尾符号，尤其是在跨平台项目中，通过配置<code>.editorconfig</code>、<code>.gitattributes</code>文件和Git的<code>core.autocrlf</code>选项，可以有效地管理和处理行尾符号，确保代码在不同操作系统上的一致性和兼容性。</p>
+<h2>如何配置统一使用LF行尾符号？</h2>
+<p>要统一使用LF行尾符号，可以通过配置<code>.editorconfig</code>文件、<code>.gitattributes</code>文件以及Git的<code>core.autocrlf</code>选项来实现。以下是具体步骤：</p>
+<h3>1. 使用 <code>.editorconfig</code> 文件</h3>
+<p><code>.editorconfig</code> 文件可以帮助你在不同编辑器和IDE中统一代码风格，包括行尾符号。</p>
+<p>在项目根目录下创建一个名为 <code>.editorconfig</code> 的文件，并添加以下内容：</p>
+<pre><code class="language-ini">root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+</code></pre>
+<p>这将告诉支持 EditorConfig 的编辑器使用 LF 作为所有文件的行尾符号，并使用 UTF-8 编码。</p>
+<h3>2. 配置 <code>.gitattributes</code> 文件</h3>
+<p>在项目根目录下创建一个名为 <code>.gitattributes</code> 的文件，并添加以下内容：</p>
+<pre><code class="language-text">* text=auto
+*.sh text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+</code></pre>
+<p>这将确保在 Git 中所有文件使用自动检测的文本模式，而对于特定类型的文件（例如 <code>.sh</code>、<code>.js</code>、<code>.css</code>、<code>.html</code>），强制使用 LF 作为行尾符号。</p>
+<h3>3. 配置 Git 的 <code>core.autocrlf</code> 选项</h3>
+<p>根据操作系统的不同，配置 Git 的 <code>core.autocrlf</code> 选项：</p>
+<ul>
+<li>
+<p><strong>在 Unix/Linux 和 macOS 系统上</strong>：</p>
+<pre><code class="language-sh">git config --global core.autocrlf input
+</code></pre>
+<p>这将告诉 Git 检出代码时不转换行尾符号，提交代码时将 CRLF 转换为 LF。</p>
+</li>
+<li>
+<p><strong>在 Windows 系统上</strong>：</p>
+<pre><code class="language-sh">git config --global core.autocrlf true
+</code></pre>
+<p>这将告诉 Git 检出代码时将 LF 转换为 CRLF，提交代码时将 CRLF 转换为 LF。</p>
+</li>
+</ul>
+<h3>4. 将现有文件转换为 LF 行尾符号</h3>
+<p>如果你有现有的文件需要转换为 LF 行尾符号，可以使用以下命令进行批量转换：</p>
+<ul>
+<li>
+<p><strong>在 Unix/Linux 和 macOS 系统上</strong>：</p>
+<pre><code class="language-sh">find . -type f -exec dos2unix {} \;
+</code></pre>
+</li>
+<li>
+<p><strong>在 Windows 系统上</strong>：</p>
+<p>使用 Git Bash 或其他 Unix 风格的终端运行以下命令：</p>
+<pre><code class="language-sh">find . -type f -exec dos2unix {} \;
+</code></pre>
+</li>
+</ul>
+<p>或者使用 PowerShell 脚本：</p>
+<pre><code class="language-powershell">Get-ChildItem -Recurse -File | ForEach-Object {
+    (Get-Content -Raw -Path $_.FullName).Replace(&quot;`r`n&quot;, &quot;`n&quot;) | Set-Content -NoNewline -Path $_.FullName
+}
+</code></pre>
+<h3>总结</h3>
+<p>通过上述步骤，你可以在项目中统一使用 LF 行尾符号。使用 <code>.editorconfig</code> 文件和 <code>.gitattributes</code> 文件可以确保编辑器和 Git 都按照统一的行尾符号处理文件，从而避免由于行尾符号不同导致的问题。</p>
+<h2>如果当前是CRLF，并且设置了 <code>git config --global core.autocrlf true</code> ，会发生什么？</h2>
+<p>如果当前的文件使用的是CRLF行尾符号，并且你在Git中设置了<code>git config --global core.autocrlf true</code>，会发生以下情况：</p>
+<ol>
+<li>
+<p><strong>检出文件时</strong>：</p>
+<ul>
+<li>Git会将仓库中的LF行尾符号转换为CRLF行尾符号。这是因为<code>core.autocrlf</code>配置为<code>true</code>会自动在Windows系统上将所有检出的文件转换为CRLF，以适应Windows系统的行尾符号惯例。</li>
+</ul>
+</li>
+<li>
+<p><strong>提交文件时</strong>：</p>
+<ul>
+<li>Git会将工作目录中的CRLF行尾符号转换为LF行尾符号，然后将文件提交到仓库中。这意味着，尽管你的工作目录中的文件使用的是CRLF行尾符号，但一旦提交到Git仓库中，它们将被转换为LF行尾符号存储。</li>
+</ul>
+</li>
+</ol>
+<h3>具体影响</h3>
+<ol>
+<li>
+<p><strong>避免行尾符号问题</strong>：</p>
+<ul>
+<li>这种配置可以避免在跨平台开发中常见的行尾符号问题。例如，当Windows用户和Unix/Linux或macOS用户共同开发一个项目时，可以确保仓库中的行尾符号一致，避免因行尾符号不同而导致的合并冲突和差异问题。</li>
+</ul>
+</li>
+<li>
+<p><strong>文件内容一致性</strong>：</p>
+<ul>
+<li>尽管在Windows上工作目录中的文件使用的是CRLF，但由于在提交时Git会将其转换为LF，因此仓库中存储的文件行尾符号始终是LF。这保证了文件内容的一致性。</li>
+</ul>
+</li>
+<li>
+<p><strong>编辑器的影响</strong>：</p>
+<ul>
+<li>Windows上的一些文本编辑器（如Notepad）对LF行尾符号支持不佳，可能导致显示和编辑问题。而配置<code>core.autocrlf=true</code>可以让检出的文件使用CRLF，从而避免这些问题。</li>
+</ul>
+</li>
+</ol>
+<h3>需要注意的事项</h3>
+<ol>
+<li>
+<p><strong>现有文件的转换</strong>：</p>
+<ul>
+<li>如果项目中已有大量文件使用的是CRLF行尾符号，在配置<code>core.autocrlf=true</code>后，第一次提交时可能会看到大量文件被修改，因为Git会将它们的行尾符号转换为LF。</li>
+</ul>
+</li>
+<li>
+<p><strong>提交前检查</strong>：</p>
+<ul>
+<li>在第一次提交前，可以使用<code>git status</code>和<code>git diff</code>检查哪些文件将被修改，以确保没有意外的变更。</li>
+</ul>
+</li>
+<li>
+<p><strong>团队协作</strong>：</p>
+<ul>
+<li>确保团队中的所有成员都了解并统一使用相同的Git配置，以避免由于行尾符号处理不一致导致的问题。</li>
+</ul>
+</li>
+</ol>
+<h3>总结</h3>
+<p>配置<code>git config --global core.autocrlf true</code>可以帮助在Windows系统上工作的开发者自动处理行尾符号转换问题，确保提交到Git仓库中的文件使用一致的LF行尾符号。这种配置在跨平台开发中非常有用，但需要团队成员了解这一配置，并可能需要对现有文件进行一次性处理以统一行尾符号。</p>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/6"/><category term="javascript"/><published>2024-08-20T01:34:51+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/5</id><title>typeof和instanceof的区别</title><updated>2024-08-20T01:35:14.144708+00:00</updated><content type="html"><![CDATA[<p><code>typeof</code> 和 <code>instanceof</code> 都是 JavaScript 中用于类型检查的操作符，但它们的使用场景和功能有所不同。</p>
 <p><code>typeof</code> 用于检测一个变量的数据类型。它返回一个字符串，表示变量的类型，比如 <code>&quot;string&quot;</code>、<code>&quot;number&quot;</code>、<code>&quot;boolean&quot;</code>、<code>&quot;undefined&quot;</code>、<code>&quot;object&quot;</code>、<code>&quot;function&quot;</code>、以及 ES6 引入的 <code>&quot;symbol&quot;</code>。<code>typeof</code> 适用于基本数据类型的判断，尤其是当你不确定变量是否已定义或是否为基本类型时。此外，对于引用类型的对象，<code>typeof</code> 通常返回 <code>&quot;object&quot;</code>，但需要注意的是，对 <code>null</code> 执行 <code>typeof</code> 也会返回 <code>&quot;object&quot;</code>，这是一种历史遗留的设计问题。</p>
 <blockquote>
 <p>[!warning]
@@ -7,14 +195,14 @@
 </blockquote>
 <p>相比之下，<code>instanceof</code> 用于检测一个对象是否为某个构造函数的实例。它通过检查对象的原型链来判断，返回一个布尔值。<code>instanceof</code> 主要应用于判断复杂类型，比如自定义类实例或数组等。它能够更准确地识别出对象的具体类型，尤其是在需要区分对象的继承关系或具体类型时。</p>
 <p>总结来说，<code>typeof</code> 适合用于判断基本数据类型，而 <code>instanceof</code> 则适用于检测对象是否属于特定的类或构造函数。两者结合使用，可以在不同场景下进行灵活的类型检查。</p>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/5"/><category term="javascript"/><published>2024-08-16T07:19:51+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/4</id><title>水平垂直居中的方案</title><updated>2024-08-16T07:20:17.040601+00:00</updated><content type="html"><![CDATA[<p>1、有固定的宽度
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/5"/><category term="javascript"/><published>2024-08-16T07:19:51+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/4</id><title>水平垂直居中的方案</title><updated>2024-08-20T01:35:14.220435+00:00</updated><content type="html"><![CDATA[<p>1、有固定的宽度
 方法1：absolute + 负margin
 方法2：absolute + margin: auto</p>
 <p>2、无固定的宽度
 方法1：absolute + transform反向偏移
 方法2：flex布局</p>
 <p><a href="https://daotin.github.io/fe-blog/posts/2021/07/27/%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.html">https://daotin.github.io/fe-blog/posts/2021/07/27/%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.html</a></p>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/4"/><category term="css"/><published>2024-08-16T06:32:26+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-16T07:20:17.120312+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/4"/><category term="css"/><published>2024-08-16T06:32:26+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-20T01:35:14.285661+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong>静态定位 (<code>static</code>)</strong>：</p>
 <ul>
@@ -61,7 +249,7 @@
 </ul>
 </li>
 </ol>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-16T07:20:17.204351+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-20T01:35:14.362936+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong><code>script</code></strong>: </p>
 <ul>
@@ -89,5 +277,5 @@
 <li><code>async</code>和<code>defer</code>只对外部脚本有效，内联脚本无效。</li>
 <li>使用<code>defer</code>时，确保脚本间的执行顺序。</li>
 </ul>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/fe-interview-2024/issues/1</id><title>demo</title><updated>2024-08-16T07:20:17.295822+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
-]]></content><link href="https://github.com/Daotin/fe-interview-2024/issues/1"/><category term="demo"/><published>2024-08-16T02:37:19+00:00</published></entry></feed>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/1</id><title>demo</title><updated>2024-08-20T01:35:14.434294+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/1"/><category term="demo"/><published>2024-08-16T02:37:19+00:00</published></entry></feed>
