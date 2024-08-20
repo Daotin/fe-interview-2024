@@ -11,7 +11,7 @@ from marko.ext.gfm import gfm as marko
 
 MD_HEAD = """## [issue-blog](https://github.com/Daotin/issue-blog/)
 <p align="center">
-    <a href="https://github.com/Daotin/issue-blog/">issue博客</a> | <a href="https://daotin.github.io/fe-blog/">原博客</a> | <a href="https://daotin.github.io/fe-series-notes/">专栏系列</a>
+    <a href="https://github.com/Daotin/issue-blog/" target="_blank">issue博客</a> | <a href="https://daotin.github.io/fe-blog/" target="_blank">原博客</a> | <a href="https://daotin.github.io/fe-series-notes/" target="_blank">专栏系列</a>
 </p>
 """
 
