@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/issue-blog</id><title>RSS feed of Daotin's issue-blog</title><updated>2024-08-20T02:19:35.911071+00:00</updated><link href="https://github.com/Daotin/issue-blog"/><link href="https://raw.githubusercontent.com/Daotin/issue-blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/issue-blog/issues/7</id><title>跨域的时候，post为什么会发送两次请求？</title><updated>2024-08-20T02:19:36.119962+00:00</updated><content type="html"><![CDATA[<h2>什么是预检请求？</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/Daotin/issue-blog</id><title>RSS feed of Daotin's issue-blog</title><updated>2024-08-20T02:22:49.762543+00:00</updated><link href="https://github.com/Daotin/issue-blog"/><link href="https://raw.githubusercontent.com/Daotin/issue-blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/Daotin/issue-blog/issues/7</id><title>跨域的时候，post为什么会发送两次请求？</title><updated>2024-08-20T02:22:49.936087+00:00</updated><content type="html"><![CDATA[<h2>什么是预检请求？</h2>
 <p>想象你要去一个从未去过的国家旅行。在真正踏上旅程之前，你可能会先打电话给那个国家的海关，问问你是否可以入境，需要带什么证件，是否需要签证等。这个打电话询问的过程，就像是预检请求。</p>
 <p>在网络世界中，当你的网页想要访问另一个网站的数据（这就是所谓的跨源请求）时，浏览器有时会先发送一个&quot;预检请求&quot;，就是在问那个网站：&quot;嘿，我可以用这种方式访问你的数据吗？&quot;</p>
 <p><strong>预检请求是浏览器在发送实际的跨源请求之前，先向服务器发送的一个特殊的OPTIONS请求，用于检查实际请求是否安全可接受。</strong></p>
@@ -42,7 +42,7 @@
 <li>它发送的是 JSON 数据</li>
 </ul>
 <p>浏览器会先发送一个 OPTIONS 请求（预检请求），询问服务器是否允许这样的请求。如果服务器答应了，真正的 POST 请求才会被发送。</p>
-]]></content><link href="https://github.com/Daotin/issue-blog/issues/7"/><category term="javascript"/><published>2024-08-20T02:19:14+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/6</id><title>行尾符号LF和CRLF</title><updated>2024-08-20T02:19:36.238216+00:00</updated><content type="html"><![CDATA[<h2>一般在不同的系统，行业通用的做法是如何使用行尾符号的？</h2>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/7"/><category term="javascript"/><published>2024-08-20T02:19:14+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/6</id><title>行尾符号LF和CRLF</title><updated>2024-08-20T02:22:50.010789+00:00</updated><content type="html"><![CDATA[<h2>一般在不同的系统，行业通用的做法是如何使用行尾符号的？</h2>
 <p>在不同操作系统上，行尾符号的使用有一定的行业惯例和最佳实践。以下是不同系统以及在跨平台开发中常见的行尾符号使用方式：</p>
 <h3>不同操作系统的行尾符号惯例</h3>
 <ol>
@@ -230,7 +230,7 @@ charset = utf-8
 </ol>
 <h3>总结</h3>
 <p>配置<code>git config --global core.autocrlf true</code>可以帮助在Windows系统上工作的开发者自动处理行尾符号转换问题，确保提交到Git仓库中的文件使用一致的LF行尾符号。这种配置在跨平台开发中非常有用，但需要团队成员了解这一配置，并可能需要对现有文件进行一次性处理以统一行尾符号。</p>
-]]></content><link href="https://github.com/Daotin/issue-blog/issues/6"/><category term="javascript"/><published>2024-08-20T01:34:51+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/5</id><title>typeof和instanceof的区别</title><updated>2024-08-20T02:19:36.353624+00:00</updated><content type="html"><![CDATA[<p><code>typeof</code> 和 <code>instanceof</code> 都是 JavaScript 中用于类型检查的操作符，但它们的使用场景和功能有所不同。</p>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/6"/><category term="javascript"/><published>2024-08-20T01:34:51+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/5</id><title>typeof和instanceof的区别</title><updated>2024-08-20T02:22:50.100167+00:00</updated><content type="html"><![CDATA[<p><code>typeof</code> 和 <code>instanceof</code> 都是 JavaScript 中用于类型检查的操作符，但它们的使用场景和功能有所不同。</p>
 <p><code>typeof</code> 用于检测一个变量的数据类型。它返回一个字符串，表示变量的类型，比如 <code>&quot;string&quot;</code>、<code>&quot;number&quot;</code>、<code>&quot;boolean&quot;</code>、<code>&quot;undefined&quot;</code>、<code>&quot;object&quot;</code>、<code>&quot;function&quot;</code>、以及 ES6 引入的 <code>&quot;symbol&quot;</code>。<code>typeof</code> 适用于基本数据类型的判断，尤其是当你不确定变量是否已定义或是否为基本类型时。此外，对于引用类型的对象，<code>typeof</code> 通常返回 <code>&quot;object&quot;</code>，但需要注意的是，对 <code>null</code> 执行 <code>typeof</code> 也会返回 <code>&quot;object&quot;</code>，这是一种历史遗留的设计问题。</p>
 <blockquote>
 <p>[!warning]
@@ -238,14 +238,14 @@ charset = utf-8
 </blockquote>
 <p>相比之下，<code>instanceof</code> 用于检测一个对象是否为某个构造函数的实例。它通过检查对象的原型链来判断，返回一个布尔值。<code>instanceof</code> 主要应用于判断复杂类型，比如自定义类实例或数组等。它能够更准确地识别出对象的具体类型，尤其是在需要区分对象的继承关系或具体类型时。</p>
 <p>总结来说，<code>typeof</code> 适合用于判断基本数据类型，而 <code>instanceof</code> 则适用于检测对象是否属于特定的类或构造函数。两者结合使用，可以在不同场景下进行灵活的类型检查。</p>
-]]></content><link href="https://github.com/Daotin/issue-blog/issues/5"/><category term="javascript"/><published>2024-08-16T07:19:51+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/4</id><title>水平垂直居中的方案</title><updated>2024-08-20T02:19:36.435868+00:00</updated><content type="html"><![CDATA[<p>1、有固定的宽度
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/5"/><category term="javascript"/><published>2024-08-16T07:19:51+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/4</id><title>水平垂直居中的方案</title><updated>2024-08-20T02:22:50.172285+00:00</updated><content type="html"><![CDATA[<p>1、有固定的宽度
 方法1：absolute + 负margin
 方法2：absolute + margin: auto</p>
 <p>2、无固定的宽度
 方法1：absolute + transform反向偏移
 方法2：flex布局</p>
 <p><a href="https://daotin.github.io/fe-blog/posts/2021/07/27/%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.html">https://daotin.github.io/fe-blog/posts/2021/07/27/%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.html</a></p>
-]]></content><link href="https://github.com/Daotin/issue-blog/issues/4"/><category term="css"/><published>2024-08-16T06:32:26+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-20T02:19:36.505256+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/4"/><category term="css"/><published>2024-08-16T06:32:26+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/3</id><title>CSS几种定位的规则、定位参照物、对文档流的影响</title><updated>2024-08-20T02:22:50.241526+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong>静态定位 (<code>static</code>)</strong>：</p>
 <ul>
@@ -292,7 +292,7 @@ charset = utf-8
 </ul>
 </li>
 </ol>
-]]></content><link href="https://github.com/Daotin/issue-blog/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-20T02:19:36.622889+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/3"/><category term="css"/><published>2024-08-16T06:21:23+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/2</id><title>script、script async 和 script defer 的区别</title><updated>2024-08-20T02:22:50.323104+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p><strong><code>script</code></strong>: </p>
 <ul>
@@ -320,5 +320,5 @@ charset = utf-8
 <li><code>async</code>和<code>defer</code>只对外部脚本有效，内联脚本无效。</li>
 <li>使用<code>defer</code>时，确保脚本间的执行顺序。</li>
 </ul>
-]]></content><link href="https://github.com/Daotin/issue-blog/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/1</id><title>demo</title><updated>2024-08-20T02:19:36.699595+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
+]]></content><link href="https://github.com/Daotin/issue-blog/issues/2"/><category term="html"/><published>2024-08-16T05:52:24+00:00</published></entry><entry><id>https://github.com/Daotin/issue-blog/issues/1</id><title>demo</title><updated>2024-08-20T02:22:50.400948+00:00</updated><content type="html"><![CDATA[<p>demodemo</p>
 ]]></content><link href="https://github.com/Daotin/issue-blog/issues/1"/><category term="demo"/><published>2024-08-16T02:37:19+00:00</published></entry></feed>

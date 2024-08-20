@@ -1,5 +1,7 @@
-## [fe-interview-2024](https://github.com/Daotin/fe-interview-2024/)
-2024前端面试题 [RSS Feed](https://raw.githubusercontent.com/Daotin/issue-blog/master/feed.xml)
+## [issue-blog](https://github.com/Daotin/issue-blog/)
+- issue博客：https://github.com/Daotin/issue-blog/
+- 原博客地址：https://daotin.github.io/fe-blog/
+- 专栏系列：https://daotin.github.io/fe-series-notes/
 
 ## 最近更新
 - [跨域的时候，post为什么会发送两次请求？](https://github.com/Daotin/issue-blog/issues/7)--2024-08-20
